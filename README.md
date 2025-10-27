@@ -1,6 +1,7 @@
-<!-- Linguagens mais usadas -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascostabueno&hide=html&layout=compact&theme=dark" />
+[![Top Linguagens do GitHub](https://github-readme-stats.vercel.app/api/top-langs/?username=lucascostabueno&layout=compact&theme=dark)](https://github.com/lucascostabueno)
 
-<!-- Estatísticas do GitHub -->
-<img src="https://github-readme-stats.vercel.app/api?username=lucascostabueno&theme=dark" />
+[![Minhas Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=lucascostabueno&show_icons=true&theme=dark)](https://github.com/lucascostabueno)
+
+
+
 
