@@ -1,4 +1,4 @@
-# 👩🏻‍💻 Lucas Bueno
+# 👨‍💻 Lucas Bueno
 
 **`Desenvolvedor Full Stack`**
 
