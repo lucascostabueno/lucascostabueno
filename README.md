@@ -4,7 +4,7 @@
 
 Me chamo Lucas Costa Bueno, tenho 22 anos e sou natural de Mato Grosso. Atualmente, atuo como desenvolvedor full stack. Sou apaixonado por tecnologia, por transformar ideias em código limpo e por buscar sempre otimizar a performance de sistemas. Compartilho minha trajetória e conhecimento através da programação, focando em criar soluções eficientes e robustas utilizando tecnologias modernas de desenvolvimento.
 
-<p align="center">
+<p align="left">
   <a href="https://www.linkedin.com/in/lucascostabueno/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
