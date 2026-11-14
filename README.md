@@ -43,17 +43,10 @@ Me chamo Lucas Costa Bueno, tenho 22 anos e sou natural de Mato Grosso. Atualmen
 
 ## 📊 Estatísticas do GitHub
 
-## 📊 Estatísticas do GitHub
-
-<p align="left">
-  <img src="./top-langs.svg" alt="Top Linguagens" height="180px" />
-  <img src="./stats.svg" alt="Estatísticas do GitHub" height="180px" />
-</p>
-
-<!-- <p align="left">
+ <p align="left">
 
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucascostabueno&layout=donut&theme=github_dark" alt="Top Linguagens" height="180px" />
 
   <img src="https://github-readme-stats.vercel.app/api?username=lucascostabueno&show_icons=true&theme=github_dark" alt="Estatísticas do GitHub" height="180px" />
 
-</p> -->
+</p> 
