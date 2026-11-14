@@ -34,26 +34,24 @@ jobs:
         env:
           PAT_1: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node -e '
-            const fs = require("fs");
-            const statsApi = require("./api/index.js");
-            const langsApi = require("./api/top-langs.js");
+          node --input-type=module -e '
+            import fs from "fs";
+            import statsApi from "./api/index.js";
+            import langsApi from "./api/top-langs.js";
 
             const mockRes = (file) => ({
               setHeader: () => {},
               send: (svg) => fs.writeFileSync(file, svg)
             });
 
-            (async () => {
-              await statsApi(
-                { query: { username: "lucascostabueno", show_icons: "true", theme: "github_dark" } },
-                mockRes("${{ github.workspace }}/stats.svg")
-              );
-              await langsApi(
-                { query: { username: "lucascostabueno", layout: "donut", theme: "github_dark" } },
-                mockRes("${{ github.workspace }}/top-langs.svg")
-              );
-            })();
+            await statsApi(
+              { query: { username: "lucascostabueno", show_icons: "true", theme: "github_dark" } },
+              mockRes("${{ github.workspace }}/stats.svg")
+            );
+            await langsApi(
+              { query: { username: "lucascostabueno", layout: "donut", theme: "github_dark" } },
+              mockRes("${{ github.workspace }}/top-langs.svg")
+            );
           '
 
       - name: Commit SVGs
