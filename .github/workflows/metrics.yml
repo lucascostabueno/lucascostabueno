@@ -14,25 +14,47 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
 
-      - name: Generate Top Langs SVG
-        uses: kyle1320/github-readme-stats-action@v1.0.2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          username: lucascostabueno
-          token: ${{ secrets.GITHUB_TOKEN }}
-          card: top-langs
-          options: layout=donut&theme=github_dark
-          path: top-langs.svg
+          node-version: 20
 
-      - name: Generate Stats SVG
-        uses: kyle1320/github-readme-stats-action@v1.0.2
-        with:
-          username: lucascostabueno
-          token: ${{ secrets.GITHUB_TOKEN }}
-          card: stats
-          options: show_icons=true&theme=github_dark
-          path: stats.svg
+      - name: Clone official github-readme-stats
+        run: git clone --depth 1 https://github.com/anuraghazra/github-readme-stats.git /tmp/grs
+
+      - name: Install dependencies
+        working-directory: /tmp/grs
+        run: npm ci --omit=dev
+
+      - name: Generate SVGs
+        working-directory: /tmp/grs
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node -e '
+            const fs = require("fs");
+            const statsApi = require("./api/index.js");
+            const langsApi = require("./api/top-langs.js");
+
+            const mockRes = (file) => ({
+              setHeader: () => {},
+              send: (svg) => fs.writeFileSync(file, svg)
+            });
+
+            (async () => {
+              await statsApi(
+                { query: { username: "lucascostabueno", show_icons: "true", theme: "github_dark" } },
+                mockRes("${{ github.workspace }}/stats.svg")
+              );
+              await langsApi(
+                { query: { username: "lucascostabueno", layout: "donut", theme: "github_dark" } },
+                mockRes("${{ github.workspace }}/top-langs.svg")
+              );
+            })();
+          '
 
       - name: Commit SVGs
         run: |
