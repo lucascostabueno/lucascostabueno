@@ -32,7 +32,7 @@ jobs:
       - name: Generate SVGs
         working-directory: /tmp/grs
         env:
-          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+          PAT_1: ${{ secrets.STATS_TOKEN }}
         run: |
           node --input-type=module -e '
             import fs from "fs";
