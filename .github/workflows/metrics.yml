@@ -20,14 +20,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Clone official github-readme-stats
         run: git clone --depth 1 https://github.com/anuraghazra/github-readme-stats.git /tmp/grs
 
       - name: Install dependencies
         working-directory: /tmp/grs
-        run: npm ci --omit=dev
+        run: npm ci --omit=dev --ignore-scripts
 
       - name: Generate SVGs
         working-directory: /tmp/grs
