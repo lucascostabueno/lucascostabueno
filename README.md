@@ -37,6 +37,7 @@ Me chamo Lucas Costa Bueno, tenho 22 anos e sou natural de Mato Grosso. Atualmen
   <img alt="Oracle" title="Oracle" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
   <img alt="SQL Server" title="SQL Server" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" />
   <img alt="MariaDB" title="MariaDB" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" />
+  <img alt="Docker" title="Docker" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
   <img alt="Git" title="Git" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
   <img alt="GitHub" title="GitHub" width="32px" style="padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
 </p>
